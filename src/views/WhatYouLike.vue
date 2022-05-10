@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-10 gap-2 items-center p-10 relative">
-    <div class="flex col-span-7 w-full h-config overflow-y-scroll ">
+  <div class="flex gap-2 items-center p-10 relative flex-col-reverse sm:flex-row">
+    <div class="flex gap-2 md:w-9/12 w-full h-config overflow-y-scroll ">
       <div class="flex flex-col w-full gap-1 -translate-y-3/4">
         <div v-for="img in img" :key="img" class=" md:w-5/6  m-auto">
           <img class="h-full w-full overflow-hidden rounded-xl" :src="img" alt="">
@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-    <div class="col-span-2 ml-5">
-      <h1 class="text-9xl font-black text-white">WHAT YOU LIKE</h1>
+    <div class="w-full md:w-3/12 ml-5">
+      <h1 class="text-7xl md:text-8xl font-black text-white">WHAT YOU LIKE</h1>
     </div>
     <div class="absolute right-3 bottom-3 p-1 pl-3 pr-3 bg-t1 rounded hover:rounded-xl" @click="home">
       <h1>Next</h1>

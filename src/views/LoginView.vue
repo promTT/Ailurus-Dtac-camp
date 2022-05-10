@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-2/4 md:w-1/4 absolute center p-10 gap-3 items-center text-center text-white bg-transparent mt-5 -z-20">
+  <div class="flex flex-col w-3/4 md:w-2/4 absolute center p-10 gap-3 items-center text-center text-white bg-transparent mt-5 -z-20">
     <h1 class="text-5xl mb-5">Login</h1>
     <div v-show="signUP" class="flex w-full flex-row justify-center gap-5 ">
       <input class="w-full h-10 rounded-md text-black pl-5" type="text" placeholder="name" v-model="name" />
@@ -14,7 +14,7 @@
     </div>
     <p class="text-xs" >{{ message }}</p>
     <div v-show="signUP == false">
-      <h1 @click="toggleSwitch">&lt;&lt;&lt;Note>>></h1>
+      <h1 class="p-3 bg-t1 rounded-xl button-noneShadow" @click="toggleSwitch">&lt;&lt;&lt;Note>>></h1>
       <p class="text-xs" v-show="switcher">Username is user and Password is user1234</p>
     </div>
   </div>
@@ -103,5 +103,10 @@ export default {
     background: linear-gradient(155.24deg, #F08080 1.56%, #FFDAB9 92.44%);
     mix-blend-mode: soft-light;
     box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.2);
+  }
+  .button-noneShadow{
+    background: linear-gradient(155.24deg, #F08080 1.56%, #FFDAB9 92.44%);
+    mix-blend-mode: soft-light;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   }
 </style>
