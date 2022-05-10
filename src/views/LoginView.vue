@@ -3,7 +3,7 @@
     <h1 class="text-5xl mb-5">Login</h1>
     <div v-show="signUP" class="flex w-full flex-row justify-center gap-5 ">
       <input class="w-full h-10 rounded-md text-black pl-5" type="text" placeholder="name" v-model="name" />
-      <input class="w-full h-10 rounded-md text-black pl-5" type="password" placeholder="surname" v-model="surname" @keyup.enter="login"/>
+      <input class="w-full h-10 rounded-md text-black pl-5" type="text" placeholder="surname" v-model="surname" @keyup.enter="login"/>
     </div>
     <input class="w-full h-10 rounded-md text-black pl-5" type="text" placeholder="Username" v-model="username" />
     <input class="w-full h-10 rounded-md text-black pl-5" type="password" placeholder="Password" v-model="password" @keyup.enter="login"/>
