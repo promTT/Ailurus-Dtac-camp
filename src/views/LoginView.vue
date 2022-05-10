@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-2/4 md:w-1/4 absolute center p-10 gap-3 items-center text-center text-white bg-transparent mt-5">
+  <div class="flex flex-col w-2/4 md:w-1/4 absolute center p-10 gap-3 items-center text-center text-white bg-transparent mt-5 -z-20">
     <h1 class="text-5xl mb-5">Login</h1>
     <div v-show="signUP" class="flex w-full flex-row justify-center gap-5 ">
       <input class="w-full h-10 rounded-md text-black pl-5" type="text" placeholder="name" v-model="name" />
@@ -51,6 +51,7 @@ export default {
           alert("Sign up success");
           this.password = "";
           this.repassword = "";
+          this.$router.push('/what-you-like');
         }else if (this.password == "" | this.username ==""){
           alert("Please enter username and password");
         }

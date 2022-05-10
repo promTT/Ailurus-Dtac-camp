@@ -1,16 +1,16 @@
 <template>
-  <div class="grid grid-cols-4 absolute center place-content-center bg-white w-full p-10 gap-10">
-    <div class="bg-t1 p-7 text-center rounded-2xl sticky h-full">
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">คำคม</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">ตลก</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">หนัง</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">หนังสือ</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">อาหาร</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 mt-2 mb-2 rounded-xl">เกม</h1>
+  <div class="grid grid-cols-2 md:grid-cols-4 absolute center place-content-center bg-white w-full pt-5 pb-5 md:p-10 gap-5 md:gap-10">
+    <div class="bg-t1 p-2 md:p-7 col-span-2 md:col-span-1 text-center rounded-2xl flex md:flex-col sticky h-full md:overflow-hidden overflow-x-scroll gap-2">
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">คำคม</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">ตลก</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนัง</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนังสือ</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">อาหาร</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">เกม</h1>
     </div>
-    <div class="bg-config col-span-3 relative ">
+    <div class="bg-config col-span-2 md:col-span-3 relative ">
       <div class="overflow-y-scroll scrollbar h-config m-auto p-5">
-        <div v-for="user in user" :key="user" class=" pt-5 pb-5 rounded-xl w-4/6 mt-5 mb-5 overflow-hidden m-auto  bg-transparent">
+        <div v-for="user in user" :key="user" class=" pt-5 pb-5 rounded-xl md:w-4/6 mt-5 mb-5 overflow-hidden m-auto  bg-transparent">
           <div class="flex gap-3 justify-between pl-5 pr-5">
             <h1>{{user.username}}</h1>
             <h2>{{user.date}}</h2>

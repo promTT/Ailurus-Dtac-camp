@@ -28,7 +28,7 @@
             <div class="w-10 h-0.5 bg-t6 "></div>
             <div class="w-10 h-0.5 bg-t6 "></div>
           </div>
-          <div  v-if="switcher" class="self-center text-xl block md:hidden absolute top-16 bg-t5 left-0 p-4 w-screen">
+          <div  v-if="switcher" class="self-center text-xl block md:hidden absolute top-16 bg-t5 left-0 p-4 w-screen z-50">
             <div class="sm:inline-block">
               <router-link class="p-3 hover:text-white" to="/"
                 >Home</router-link
@@ -80,11 +80,19 @@ export default {
 
 <style>
 ::selection {
-  background: #FFFFFF;
+  background: #ffffffaa;
 }
 
 ::-moz-selection {
-  background: #FFFFFF;
+  background: #ffffffaa;
+}
+
+.text-white::selection{
+  color: #000000;
+}
+
+.text-white::-moz-selection {
+  color: #000000;
 }
 
 .text-main::selection {

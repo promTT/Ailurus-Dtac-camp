@@ -28,4 +28,12 @@ export default {
     border-radius: 40px;
 }
 
+.text-white::selection{
+  background: #000000;
+}
+
+.text-white::-moz-selection {
+  background: #000000;
+}
+
 </style>
