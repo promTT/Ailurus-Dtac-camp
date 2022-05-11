@@ -1,6 +1,6 @@
 <template>
   <div class="bg-t2 p-5">
-      <div class="grid grid-cols-5 gap-10 m-5">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10 md:gap-10 m-5">
           <div class="col-span-2 bg-t1 rounded-xl">
             <canvas width="400" height="400">
             </canvas>

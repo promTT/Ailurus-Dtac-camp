@@ -2,7 +2,7 @@
   <div class="p-2 grid grid-cols-2 md:grid-cols-4 absolute center place-content-center bg-white w-screen md:w-full pt-5 pb-5 md:p-10 gap-5 md:gap-10">
     <div class="bg-t1 p-2 md:p-7 col-span-2 md:col-span-1 text-center rounded-2xl flex md:flex-col sticky h-full md:overflow-hidden overflow-x-scroll gap-2 justify-around">
       <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">คำคม</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">ตลก</h1>
+      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">กีฬา</h1>
       <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนัง</h1>
       <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนังสือ</h1>
       <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">อาหาร</h1>
