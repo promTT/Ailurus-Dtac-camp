@@ -1,12 +1,12 @@
 <template>
   <div class="p-2 grid grid-cols-2 md:grid-cols-4 absolute center place-content-center bg-white w-screen md:w-full pt-5 pb-5 md:p-10 gap-5 md:gap-10">
-    <div @click="comingSoon" class="bg-t1 p-2 md:p-7 col-span-2 md:col-span-1 text-center rounded-2xl flex md:flex-col sticky h-full md:overflow-hidden overflow-x-scroll gap-2 justify-around">
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">คำคม</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">กีฬา</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนัง</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนังสือ</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">อาหาร</h1>
-      <h1 class="p-4 bg-t6 hover:bg-t2 rounded-xl">เกม</h1>
+    <div class="bg-t1 p-2 md:p-7 col-span-2 md:col-span-1 text-center rounded-2xl flex md:flex-col sticky h-full md:overflow-hidden overflow-x-scroll gap-2 justify-around">
+      <h1 @click="คำคม" class="p-4 bg-t6 hover:bg-t2 rounded-xl">คำคม</h1>
+      <h1 @click="กีฬา" class="p-4 bg-t6 hover:bg-t2 rounded-xl">กีฬา</h1>
+      <h1 @click="หนัง" class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนัง</h1>
+      <h1 @click="หนังสือ" class="p-4 bg-t6 hover:bg-t2 rounded-xl">หนังสือ</h1>
+      <h1 @click="อาหาร" class="p-4 bg-t6 hover:bg-t2 rounded-xl">อาหาร</h1>
+      <h1 @click="เกม" class="p-4 bg-t6 hover:bg-t2 rounded-xl">เกม</h1>
     </div>
     <div class="bg-config col-span-2 md:col-span-3 relative ">
       <div class="overflow-y-scroll scrollbar h-config m-auto p-5">
@@ -30,6 +30,12 @@
 // @ is an alias to /src
 import add from '@/assets/image/add.png';
 import defaultImg from '@/assets/image/default-image.jpg';
+import คำคมimg from '@/assets/image/คำคมimg.png';
+import sport from '@/assets/image/sport.jpg';
+import moive from '@/assets/image/moive.jpg';
+import book from '@/assets/image/book.jpg';
+import food from '@/assets/image/food.jpg';
+import game from '@/assets/image/game.jpg';
 
 export default {
   name: 'HomeView',
@@ -39,6 +45,8 @@ export default {
     return {
       add,
       defaultImg,
+      i: false,
+      c: 0,
       user: [
       {
         username: "test-user",
@@ -54,7 +62,7 @@ export default {
         username: "test-user",
         date: "2019-12-23",
         img: defaultImg,
-      },
+      }
       ]
     }
   },
@@ -62,9 +70,66 @@ export default {
     addContent() {
       this.$router.push('/add-content');
     },
-    comingSoon() {
-      alert("Coming Soon");
-    }
+    คำคม(){
+      if(this.i == false){
+        if(this.c >= 1){this.user.pop(); this.c++}
+        this.user.push({
+          username: "คำคม",
+          date: "inspiration-post",
+          img: คำคมimg,
+        });
+      }
+    },
+    กีฬา(){
+      if(this.i == false){
+        if(this.c >= 0){this.user.pop(); this.c++}
+        this.user.push({
+          username: "กีฬา",
+          date: "inspiration-post",
+          img: sport,
+        });
+      }
+    },
+    หนัง(){
+      if(this.i == false){
+        if(this.c >= 0){this.user.pop(); this.c++}
+        this.user.push({
+          username: "หนัง",
+          date: "inspiration-post",
+          img: moive,
+        });
+      }
+    },
+    หนังสือ(){
+      if(this.i == false){
+        if(this.c >= 0){this.user.pop(); this.c++}
+        this.user.push({
+          username: "หนังสือ",
+          date: "inspiration-post",
+          img: book,
+        });
+      }
+    },
+    อาหาร(){
+      if(this.i == false){
+        if(this.c >= 0){this.user.pop(); this.c++}
+        this.user.push({
+          username: "อาหาร",
+          date: "inspiration-post",
+          img: food,
+        });
+      }
+    },
+    เกม(){
+      if(this.i == false){
+        if(this.c >= 0){this.user.pop(); this.c++}
+        this.user.push({
+          username: "เกม",
+          date: "inspiration-post",
+          img: game,
+        });
+      }
+    },
   }
 }
 </script>
