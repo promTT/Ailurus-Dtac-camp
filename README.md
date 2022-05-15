@@ -3,4 +3,4 @@ This is a website application prototype. This website's string will change to a 
 
 Here is my web application: [ailurus-dtac-camp.netlify.app/](https://ailurus-dtac-camp.netlify.app/)
 
-Update: [News]()
+Update: [News](https://www.springnews.co.th/pr-news/news/824473)
